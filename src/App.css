@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0; 
+  box-sizing: border-box;
+}
+
+.app-container {
+  background: url(./assets/images/welcome-page-city-skyline.jpeg);
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  width: 900px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
