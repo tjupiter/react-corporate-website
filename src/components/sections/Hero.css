@@ -1,0 +1,16 @@
+header {
+  background-color: white;
+  margin-bottom: -5px;
+}
+
+.hero-image {
+  width: 100vw;
+  height: 30vh;
+  object-fit: cover;
+}
+
+h2 {
+  padding: 2rem;
+  font-size: 5rem;
+  text-align: center;
+}

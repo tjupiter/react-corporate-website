@@ -1,0 +1,40 @@
+.card-container {
+  position: relative;
+  line-height: 1.3;
+}
+
+.card-container-color {
+  padding: 2rem 1.5rem;
+  opacity: .85;
+  transition: all .15s;
+}
+
+
+h3 {
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+}
+
+p {
+  color: white;
+  font-size: 1.1rem;
+}
+
+.card-container-color:hover {
+  opacity: 0.75;
+}
+
+/* .card-container-color:hover h3,
+.card-container-color:hover p {
+  filter: drop-shadow(8px 8px 10px gray);
+} */
+
+.wwd-bottom-card-container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr 1fr;
+  background: transparent;
+  margin: auto;
+}

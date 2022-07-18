@@ -1,9 +1,17 @@
 import React from 'react'
 import Nav from '../elements/Nav'
+import './Hero.css'
 
-function Hero() {
+function Hero(props) {
+
+  // console.log(props.heroImgSrc)
   return (
-    <Nav />
+    <header>
+      <img className='hero-image' src={props.heroImgSrc} alt="" />
+      <Nav />
+      {props.title && <h2>{props.title}</h2>}
+
+    </header>
   )
 }
 

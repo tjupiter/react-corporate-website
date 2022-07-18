@@ -1,0 +1,12 @@
+.wwd-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin: 0 auto 3rem;
+}
+
+.wwd-bottom-card-container {
+  display: flex;
+  gap: 1.5rem;
+  
+}

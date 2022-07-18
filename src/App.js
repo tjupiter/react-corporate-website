@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 
 // import components
-import Hero from './components/sections/Hero'
+// import Hero from './components/sections/Hero'
 
 import Welcome from './components/pages/Welcome'
 import AboutUs from './components/pages/AboutUs'
@@ -22,11 +22,10 @@ function App() {
   return (
    <div className='app-container'>
      <BrowserRouter>
-      <Hero />
   
   
       <Routes>
-        <Route path="/" index element={<Welcome />} />
+        <Route exact path="/" index element={<Welcome />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/what-we-do" element={<WhatWeDo />} />
         <Route path="/team" element={<Team />} />

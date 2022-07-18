@@ -1,0 +1,86 @@
+.contact-container {
+  background-color: white;
+}
+
+contact-inner-container {
+  margin: 0 auto;
+
+}
+
+.form--message {
+  width: 75%;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  text-align: justify;
+  font-weight: bolder;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  z-index: 2;
+  position: relative;
+  box-shadow: 1px 2px 1px black;
+}
+
+form {
+  width: 85%;
+  margin: -3rem auto 1rem;
+  padding: 4rem 2rem 2rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 2px 1px gray;
+}
+
+.form--input-container {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+  margin-bottom: 1rem;
+}
+
+.form--input-container label {
+  font-weight: bolder;
+  letter-spacing: 2px;
+  font-size: 1.1rem;
+  margin-bottom: .2rem;
+}
+
+.form--input-container input,
+.form--input-container textarea {
+  padding: .5rem .2rem;
+  text-indent: .3rem;
+  border-radius: 12px;
+  border: 1px solid gray;
+}
+
+.form--input-container input:focus,
+.form--input-container textarea:focus,
+.form--language-selector select:focus {
+  outline: none;
+  border: 3px solid orange;
+}
+
+.form--checkbox-container {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.form--checkbox-container input {
+  margin-right: .3rem;
+}
+
+.form--submit-btn {
+  cursor: pointer;
+  background-color: rgb(208, 230, 247);
+  padding: .5rem 2rem;
+  border: 1px solid gray;
+  box-shadow: 1px 1px 1px;
+  font-size: .8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 1rem;
+  align-self: flex-end;
+  margin-right: 1rem;
+}

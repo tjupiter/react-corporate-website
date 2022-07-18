@@ -1,8 +1,15 @@
 import React from 'react'
+import Hero from '../sections/Hero'
+import assets from '../assets'
 
-function Form() {
+function Form(props) {
   return (
-    <div>Form</div>
+    <>
+      <Hero
+        heroImgSrc={assets.heroWWD}
+        title="Form"
+      />
+    </>
   )
 }
 

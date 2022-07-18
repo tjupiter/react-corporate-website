@@ -15,11 +15,11 @@ function Nav() {
 
           
           <Link to="/" className='nav-links'>Home</Link> 
-          <Link to="about" className='nav-links'>About Us</Link>
-          <Link to="what-we-do" className='nav-links'>What We Do</Link>
-          <Link to="team" className='nav-links'>Team</Link>
-          <Link to="form" className='nav-links'>Form</Link>
-          <Link to="contact" className='nav-links'>Contact</Link>
+          <Link to="/about" className='nav-links'>About Us</Link>
+          <Link to="/what-we-do" className='nav-links'>What We Do</Link>
+          <Link to="/team" className='nav-links'>Team</Link>
+          <Link to="/form" className='nav-links'>Form</Link>
+          <Link to="/contact" className='nav-links'>Contact</Link>
         </div>
       </div>
     </nav>
