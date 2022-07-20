@@ -1,10 +1,12 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom'
 import assets from '../assets'
 import './WhatWeDo.css'
 
 
 // import components
 import Hero from '../sections/Hero'
+import Footer from '../sections/Footer'
 import WwdTopCard from '../elements/WwdTopCard'
 import WwdBottomCard from '../elements/WwdBottomCard'
 
@@ -17,13 +19,14 @@ import bg4 from '../../assets/images/buildings/pexels-essow-936722.jpg'
 import bottomBg from '../../assets/images/pexels-oleksandr-pidvalnyi-1227513_crop.jpg'
 
 function WhatWeDo(props) {
+  const location = useLocation();
   return (
     <>
       <Hero 
         heroImgSrc={assets.heroWWD} 
         title="What We Do"  
       />
-      <main>
+      <div className='wwd-container'>
         <div className='container wwd-top'>
           <WwdTopCard 
             bgColor="rgba(3, 110, 3, 1)"
@@ -71,8 +74,8 @@ function WhatWeDo(props) {
             </div>
             
         </div>
-
-      </main>
+      </div>
+      <Footer location={location} />
     </>
   )
 }

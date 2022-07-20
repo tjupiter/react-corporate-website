@@ -10,14 +10,14 @@
 }
 
 
-h3 {
+.wwd-top-card-title {
   margin-bottom: 1rem;
   text-transform: uppercase;
   color: white;
   letter-spacing: 1px;
 }
 
-p {
+.wwd-top-card-text {
   color: white;
   font-size: 1.1rem;
 }
@@ -26,15 +26,3 @@ p {
   opacity: 0.75;
 }
 
-/* .card-container-color:hover h3,
-.card-container-color:hover p {
-  filter: drop-shadow(8px 8px 10px gray);
-} */
-
-.wwd-bottom-card-container {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: 1fr 1fr 1fr;
-  background: transparent;
-  margin: auto;
-}

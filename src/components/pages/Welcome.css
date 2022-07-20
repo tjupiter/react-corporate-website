@@ -1,0 +1,35 @@
+.welcome-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.welcome-textbox {
+  position: absolute;
+  color: white;
+
+  width: 500px;
+  left: 15%;
+  top: 30%;
+  padding: 3rem 4rem;
+  background-color: rgba(22, 26, 65, 0.8);
+}
+
+.welcome-textbox p {
+  font-size: 2rem;
+}
+
+.welcome-textbox span {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.welcome-logo {
+  color: white;
+  font-size: 3.5rem;
+  font-weight: 900;
+  /* position: absolute; */
+  /* top: 10%;
+  left: 10%; */
+}

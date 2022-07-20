@@ -1,9 +1,11 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom'
+
 import Hero from '../sections/Hero'
+import Footer from '../sections/Footer'
 import assets from '../assets'
 
 import './Team.css'
-
 
 import TeamMemberCard from '../elements/TeamMemberCard'
 
@@ -18,6 +20,9 @@ import teamMember6 from '../../assets/images/team/team-member6.jpg'
 
 
 function Team(props) {
+
+  const location = useLocation();
+
   return (
     <>
       <Hero
@@ -76,8 +81,8 @@ function Team(props) {
             country="Norway"
           />
         </div>
-
       </div>
+      <Footer location={location} />
     </>
   )
 }

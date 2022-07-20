@@ -1,7 +1,11 @@
 import React from 'react'
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
+
 import Hero from '../sections/Hero'
+import Footer from '../sections/Footer';
 import assets from '../assets'
+
 import './Contact.css'
 
 function Contact() {
@@ -29,10 +33,20 @@ function Contact() {
     e.preventDefault();
     console.log(`Your form has been submitted, see submitted data below`)
     console.log(formData)
+    alert('Thank you. Form has been submitted.')
     // submitToApi(formData)
-
+    setFormData({
+      name: '',
+      email: '',
+      tel: '',
+      message: '',
+      newsletter: false
+    })
+    document.querySelector('.form-submit-btn').blur()
   }
-  console.log(formData)
+
+  const location = useLocation();
+  
   return (
     <>
       <Hero
@@ -40,7 +54,7 @@ function Contact() {
         title="Contact Us"
       />
       <div className='contact-container'>
-        <div className='contact-inner-container container'>
+        <div className='contact-inner-container '>
           <form onSubmit={handleSubmit}>
             <section className='form-input-container'>
               <label htmlFor='name'>Name</label>
@@ -52,6 +66,7 @@ function Contact() {
                   onChange={handleChange}
                   value={formData.name}
                   autoComplete='name'
+                  required
                   />
             </section>
             <section className='form-input-container'>
@@ -64,10 +79,11 @@ function Contact() {
                 onChange={handleChange}
                 value={formData.email}
                 autoComplete='email'
+                required
                 />
             </section>
             <section className='form-input-container'>
-              <label htmlFor='name'>Telephone number</label>
+              <label htmlFor='name'>Telephone</label>
               <input
                 type='text'
                 id='tel'
@@ -76,36 +92,39 @@ function Contact() {
                 onChange={handleChange}
                 value={formData.tel}
                 autoComplete='tel'
+                required
                 />
             </section>
-            <section className='form-input-container'>
-              <label htmlFor='name'>Your Message</label>
+            <section className='form-textarea'>
+              <label htmlFor='name'>Leave a message:</label>
               <textarea
                 id='message'
                 name='message'
                 placeholder='Type your message here...'
                 onChange={handleChange}
                 value={formData.message}
-                rows="30" cols="100"
+                
                 />
             </section>
-            <section className='form-input-container'>
-              <input
-                type='checkbox'
-                id='newsletter'
-                name='newsletter'
-                onChange={handleChange}
-                checked={formData.newsletter}
-                />
-              <label htmlFor='name'>Sign up to newsletter</label>
-            </section>
-            
-            <button className="form--submit-btn ">Submit</button>
+            <div className='form-checkbox-and-button'>
+              <section className='form-checkbox'>
+                <input
+                  type='checkbox'
+                  id='newsletter'
+                  name='newsletter'
+                  onChange={handleChange}
+                  checked={formData.newsletter}
+                  />
+                <label htmlFor='name'>Sign up to newsletter</label>
+              </section>
+              
+              <button className="form-submit-btn ">Submit</button>
+            </div>
           </form>
 
         </div>
       </div>
-
+    <Footer location={location}/>
     </>
   )
 }

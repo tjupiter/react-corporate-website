@@ -1,3 +1,9 @@
+.wwd-container {
+  margin-bottom: 3rem;
+  background-color: white;
+  ;
+}
+
 .wwd-top {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -6,7 +12,16 @@
 }
 
 .wwd-bottom-card-container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr 1fr;
+  background: transparent;
+  margin: auto;
+  gap: 1.5rem;
+}
+/* 
+.wwd-bottom-card-container {
   display: flex;
   gap: 1.5rem;
-  
-}
+
+} */

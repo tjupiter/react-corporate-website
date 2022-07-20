@@ -1,10 +1,13 @@
-footer {
-  /* position: absolute; */
-  /* bottom: 0; */
+.footer {
   width: 100vw;
   height: 50px;
   background-color: black;
   color: white;
+}
+
+.footer-absolute-bottom {
+  position: absolute;
+  bottom: 0;
 }
 
 .footer-inner-container {

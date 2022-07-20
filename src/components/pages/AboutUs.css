@@ -1,4 +1,4 @@
-main {
+.about-container {
   background-color: white;
   padding: 3rem 0;
 }
@@ -12,6 +12,7 @@ main {
   display: grid;
   grid-auto-flow: column;
   gap: 4rem;
+  color: black;
 
 }
 

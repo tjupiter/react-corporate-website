@@ -1,86 +1,106 @@
 .contact-container {
+  padding: 1.5rem 0;
   background-color: white;
 }
 
-contact-inner-container {
+.contact-inner-container {
+  width: 750px;
   margin: 0 auto;
 
-}
-
-.form--message {
-  width: 75%;
-  margin: 0 auto;
-  font-size: 1.2rem;
-  text-align: justify;
-  font-weight: bolder;
-  padding: 2rem 3rem;
-  border-radius: 1rem;
-  z-index: 2;
-  position: relative;
-  box-shadow: 1px 2px 1px black;
 }
 
 form {
-  width: 85%;
-  margin: -3rem auto 1rem;
-  padding: 4rem 2rem 2rem;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
   display: flex;
   flex-direction: column;
-  box-shadow: 1px 2px 1px gray;
 }
 
-.form--input-container {
-  display: flex;
-  flex-direction: column;
-  gap: .2rem;
+label {
+  font-weight: 700;
+}
+
+.form-input-container {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  align-items: center;
   margin-bottom: 1rem;
 }
 
-.form--input-container label {
-  font-weight: bolder;
-  letter-spacing: 2px;
-  font-size: 1.1rem;
-  margin-bottom: .2rem;
+.form-input-container input {
+  padding: .4rem .5rem;
+  /* width: 80%; */
 }
 
-.form--input-container input,
-.form--input-container textarea {
-  padding: .5rem .2rem;
-  text-indent: .3rem;
-  border-radius: 12px;
-  border: 1px solid gray;
+
+.form-textarea {
+  display: flex;
+  flex-direction: column;
 }
 
-.form--input-container input:focus,
-.form--input-container textarea:focus,
-.form--language-selector select:focus {
-  outline: none;
-  border: 3px solid orange;
+.form-textarea textarea {
+  width: 750px;
+  height: 200px;
+  margin-bottom: 1rem;
+  padding: .5rem;
 }
 
-.form--checkbox-container {
+.form-textarea label {
+  margin-bottom: .5rem;
+}
+
+.form-checkbox-and-button {
   display: flex;
   flex-direction: row;
-  align-items: baseline;
+  align-items: center;
+  margin: 1rem auto;
+  gap: 3rem;
 }
 
-.form--checkbox-container input {
-  margin-right: .3rem;
+.form-checkbox {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  padding-bottom: .5rem;
 }
 
-.form--submit-btn {
+.form-submit-btn {
+  padding: .5rem .7rem;
+  background-color: rgba(0, 0, 0, 1);
+  color: white;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  background-color: rgb(208, 230, 247);
-  padding: .5rem 2rem;
-  border: 1px solid gray;
-  box-shadow: 1px 1px 1px;
-  font-size: .8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border-radius: 1rem;
-  align-self: flex-end;
-  margin-right: 1rem;
+  transition: all .2s;
+}
+
+.form-submit-btn:hover,
+.form-submit-btn:focus {
+  outline: none;
+  background-color: rgba(0, 0, 0, .85);
+  padding: .5rem 1rem;
+}
+
+.form-submit-btn:focus {
+  border-bottom: 3px solid blue;
+}
+
+input[type='text']:focus,
+textarea:focus {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid blue;
+}
+
+textarea:focus {
+  border-top: 1px solid blue;
+}
+
+input[type='checkbox']:focus {
+  outline: none;
+}
+
+.form-checkbox:focus-within {
+  outline: none;
+  border-bottom: 1px solid blue;
+  /* border-radius: 10px; */
 }
