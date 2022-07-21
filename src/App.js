@@ -1,7 +1,7 @@
 import './App.css'
 
 import {
-  BrowserRouter,
+  HashRouter,
   Routes,
   Route,
 } from "react-router-dom";
@@ -18,7 +18,7 @@ import Contact from './components/pages/Contact'
 function App() {
   return (
    <div className='app-container'>
-     <BrowserRouter>
+     <HashRouter>
 
       <Routes>
         <Route exact path="/" index element={<Welcome />} />
@@ -33,7 +33,7 @@ function App() {
       {/* the router. => Footer rendered within each element */}
       {/* <Footer  /> */}
   
-     </BrowserRouter>
+     </HashRouter>
    </div>
   );
 }

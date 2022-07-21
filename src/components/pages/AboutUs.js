@@ -1,10 +1,10 @@
 import React from 'react'
 import Hero from '../sections/Hero'
 import Footer from '../sections/Footer'
-import assets from '../assets'
+import heroImages from '../hero-images'
 import './AboutUs.css'
-import teamPhotoA from '../../assets/images/team/pexels-fauxels-3183197.jpg'
-import teamPhotoB from '../../assets/images/team/pexels-fox-1595385.jpg'
+import teamPhotoA from '../../assets/images/team/team-a.jpg'
+import teamPhotoB from '../../assets/images/team/team-b.jpg'
 import { useLocation } from 'react-router-dom'
 
 
@@ -14,7 +14,7 @@ function AboutUs(props) {
   return (
     <>
       <Hero 
-        heroImgSrc={assets.heroAbout}
+        heroImgSrc={heroImages.heroAbout}
         
         />
       <div className='about-container'>

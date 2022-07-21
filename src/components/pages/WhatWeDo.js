@@ -1,6 +1,6 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
-import assets from '../assets'
+import heroImages from '../hero-images'
 import './WhatWeDo.css'
 
 
@@ -23,7 +23,7 @@ function WhatWeDo(props) {
   return (
     <>
       <Hero 
-        heroImgSrc={assets.heroWWD} 
+        heroImgSrc={heroImages.heroWWD} 
         title="What We Do"  
       />
       <div className='wwd-container'>
@@ -56,7 +56,7 @@ function WhatWeDo(props) {
         </div> 
         <div 
           className='wwd-bottom' 
-          style={{ background: `url(${bottomBg})`,  width: "100vw", height: "300px", display:"flex", backgroundRepeat: "no-repeat", backgroundSize: "cover" }}
+          style={{ background: `url(${bottomBg})`,  width: "100vw", display:"flex", backgroundRepeat: "no-repeat", backgroundSize: "cover" }}
         >
             <div className="wwd-bottom-card-container container">
               <WwdBottomCard

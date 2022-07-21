@@ -9,9 +9,7 @@ function Nav() {
     <nav>
       <div className='container nav-elements-container'>
         <Link to="/" className='nav-logo'>RCW</Link> 
-        {/* <div className='nav-logo'>
-          RCW
-        </div> */}
+        
 
         <div className='nav-link-container flex'>          
           {/* <Link to="/" className='nav-links'>Home</Link>  */}

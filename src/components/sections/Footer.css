@@ -11,12 +11,13 @@
 }
 
 .footer-inner-container {
-  font-size: .8rem;
+  font-size: .9rem;
   height: 100%;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 2rem;
 }
 
 .footer-link-container {
@@ -25,5 +26,11 @@
 }
 
 .footer-link-container>* {
-  cursor: pointer;  
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-inner-container {
+    padding: 0;
+  }
 }

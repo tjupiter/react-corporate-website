@@ -4,9 +4,8 @@
 }
 
 .contact-inner-container {
-  width: 750px;
+  width: 85%;
   margin: 0 auto;
-
 }
 
 form {
@@ -20,14 +19,13 @@ label {
 
 .form-input-container {
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 3fr 7fr;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .form-input-container input {
   padding: .4rem .5rem;
-  /* width: 80%; */
 }
 
 
@@ -37,7 +35,7 @@ label {
 }
 
 .form-textarea textarea {
-  width: 750px;
+  width: auto;
   height: 200px;
   margin-bottom: 1rem;
   padding: .5rem;
@@ -49,10 +47,10 @@ label {
 
 .form-checkbox-and-button {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   margin: 1rem auto;
-  gap: 3rem;
+  gap: 1rem;
 }
 
 .form-checkbox {
@@ -64,7 +62,8 @@ label {
 }
 
 .form-submit-btn {
-  padding: .5rem .7rem;
+  padding: .8rem 1rem;
+  font-size: 1.2rem;
   background-color: rgba(0, 0, 0, 1);
   color: white;
   border: none;
@@ -102,5 +101,29 @@ input[type='checkbox']:focus {
 .form-checkbox:focus-within {
   outline: none;
   border-bottom: 1px solid blue;
-  /* border-radius: 10px; */
+}
+
+@media screen and (min-width: 768px) {
+  .contact-inner-container {
+    width: 750px;
+    margin-bottom: 1rem;
+  }
+
+  .form-input-container {
+    grid-template-columns: 1fr 5fr;
+  }
+
+  .form-textarea textarea {
+    width: 750px;
+  }
+
+  .form-checkbox-and-button {
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  .form-submit-btn {
+    padding: .5rem .7rem;
+    font-size: 1rem;
+  }
 }

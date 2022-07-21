@@ -4,9 +4,8 @@ import './Footer.css'
 function Footer(props) {
 
 
-
   const pathname = props.location.pathname
-  console.log(props)
+  // console.log(props)
   return (
     <footer className={pathname === '/' ? 'footer footer-absolute-bottom' : 'footer'}>
       <div className='footer-inner-container container' >

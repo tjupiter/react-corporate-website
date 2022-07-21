@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom'
 
 import Hero from '../sections/Hero'
 import Footer from '../sections/Footer'
-import assets from '../assets'
+import heroImages from '../hero-images'
 
 import './Team.css'
 
@@ -26,7 +26,7 @@ function Team(props) {
   return (
     <>
       <Hero
-        heroImgSrc={assets.heroAbout}
+        heroImgSrc={heroImages.heroAbout}
         title="The Team"
       />
       {/* this data should be fetched from an api or js file */}

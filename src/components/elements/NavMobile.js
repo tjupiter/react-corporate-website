@@ -1,14 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import './NavHome.css';
+import './NavMobile.css'
 
-function NavHome() {
+function NavMobile() {
 
   const [isOpen, setIsOpen] = useState('false');
 
+
   function handleToggle() {
-    setIsOpen(!isOpen)
+    setIsOpen(!isOpen);
   }
 
   function getWindowDimensions() {
@@ -36,10 +37,12 @@ function NavHome() {
 
   const { width } = useWindowDimensions();
 
-  return (
 
-    <nav className='nav-home'>
-      {width < 768 &&
+
+  return (
+    
+    <nav>
+      {width < 600 && 
         <div className={`mobile-sidemenu ${isOpen ? '' : 'visible'}`}>
           <Link to="/about" className='nav-sidemenu-links'>About Us</Link>
           <Link to="/what-we-do" className='nav-sidemenu-links'>What We Do</Link>
@@ -47,30 +50,30 @@ function NavHome() {
           <Link to="/contact" className='nav-sidemenu-links'>Contact</Link>
         </div>
       }
-      <div className={`container nav-home-elements-container ${isOpen ? '' : 'nav-bar-visible'}`}>
-        <div className={`welcome-mobile-logo ${isOpen ? '' : 'black-font'}`} >RCW</div>
-        {width < 768 &&
+      <div className={`container nav-elements-container ${isOpen ? '' : 'white-bg'}`}>
+        <Link to="/" className='nav-mobile-logo'>RCW</Link>
+        {width < 600 && 
           <>
-            <div className={`nav-mobile-hamburger-container ${isOpen ? '' : 'open'}`} onClick={handleToggle}>
-              <span className='nav-mobile-hamburger-rod'></span>
-              <span className='nav-mobile-hamburger-rod'></span>
-              <span className='nav-mobile-hamburger-rod'></span>
+          <div className={`nav-mobile-hamburger-container ${isOpen ? '' : 'open'}`} onClick={handleToggle}>
+              <span className='hamburger-rod'></span>
+              <span className='hamburger-rod'></span>
+              <span className='hamburger-rod'></span>
             </div>
-
+          
           </>
         }
 
 
-        {width > 768 && <div className='nav-home-link-container flex'>
+        {width > 600 && <div className='nav-link-container flex'>
           {/* <Link to="/" className='nav-links'>Home</Link>  */}
-          <Link to="/about" className='nav-home-links'>About Us</Link>
-          <Link to="/what-we-do" className='nav-home-links'>What We Do</Link>
-          <Link to="/team" className='nav-home-links'>Team</Link>
-          <Link to="/contact" className='nav-home-links'>Contact</Link>
+          <Link to="/about" className='nav-links'>About Us</Link>
+          <Link to="/what-we-do" className='nav-links'>What We Do</Link>
+          <Link to="/team" className='nav-links'>Team</Link>
+          <Link to="/contact" className='nav-links'>Contact</Link>
         </div>}
       </div>
     </nav>
   )
 }
 
-export default NavHome
+export default NavMobile

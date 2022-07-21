@@ -5,19 +5,29 @@
   position: relative;
 }
 
+.first-load-fill-container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  z-index: -4;
+  opacity: 0;
+}
+
 .welcome-textbox {
   position: absolute;
   color: white;
-
-  width: 500px;
+  width: 300px;
   left: 15%;
   top: 30%;
-  padding: 3rem 4rem;
+  padding: 3rem 2rem;
+
   background-color: rgba(22, 26, 65, 0.8);
+  /* opacity: 0; */
 }
 
 .welcome-textbox p {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .welcome-textbox span {
@@ -29,7 +39,29 @@
   color: white;
   font-size: 3.5rem;
   font-weight: 900;
-  /* position: absolute; */
-  /* top: 10%;
-  left: 10%; */
+}
+
+
+
+@media screen and (min-width: 768px) {
+  .welcome-textbox {
+    width: 500px;
+    padding: 3rem 4rem;
+  }
+
+  .welcome-textbox p {
+    font-size: 2rem;
+  }
+}
+
+
+@media screen and (min-width: 1000px) {
+  .welcome-textbox {
+    width: 500px;
+    padding: 3rem 4rem;
+  }
+
+  .welcome-textbox p {
+    font-size: 2rem;
+  }
 }

@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 
 import Hero from '../sections/Hero'
 import Footer from '../sections/Footer';
-import assets from '../assets'
+import heroImages from '../hero-images'
 
 import './Contact.css'
 
@@ -50,7 +50,7 @@ function Contact() {
   return (
     <>
       <Hero
-        heroImgSrc={assets.heroAbout}
+        heroImgSrc={heroImages.heroAbout}
         title="Contact Us"
       />
       <div className='contact-container'>
