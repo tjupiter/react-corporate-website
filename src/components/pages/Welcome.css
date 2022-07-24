@@ -10,7 +10,7 @@
   width: 100vw;
   height: 100vh;
   background-color: black;
-  z-index: -4;
+  animation: loadContainer 2.5s;
   opacity: 0;
 }
 
@@ -21,9 +21,8 @@
   left: 15%;
   top: 30%;
   padding: 3rem 2rem;
-
   background-color: rgba(22, 26, 65, 0.8);
-  /* opacity: 0; */
+  animation: loadTextBox 2s;
 }
 
 .welcome-textbox p {
@@ -41,8 +40,6 @@
   font-weight: 900;
 }
 
-
-
 @media screen and (min-width: 768px) {
   .welcome-textbox {
     width: 500px;
@@ -54,7 +51,6 @@
   }
 }
 
-
 @media screen and (min-width: 1000px) {
   .welcome-textbox {
     width: 500px;
@@ -63,5 +59,29 @@
 
   .welcome-textbox p {
     font-size: 2rem;
+  }
+}
+
+@keyframes loadContainer {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes loadTextBox {
+  0% {
+    opacity: 0
+  }
+
+  35% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1;
   }
 }

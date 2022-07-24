@@ -1,11 +1,12 @@
-nav {
+.nav {
   position: absolute;
   top: 2rem;
   width: 100vw;
   height: 80px;
+  display: flex;
   gap: 2rem;
   background-color: rgba(255, 255, 255, 0.8);
-  display: flex;
+  z-index: 5;
 }
 
 .nav-elements-container {
@@ -14,14 +15,21 @@ nav {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  padding: 0 2rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 5;
+}
+
+.white-bg {
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .nav-logo {
   text-decoration: none;
   color: black;
-  cursor: pointer;
   font-size: 2rem;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .nav-link-container {
@@ -29,14 +37,14 @@ nav {
 }
 
 .nav-links {
+  position: relative;
   text-decoration: none;
   color: black;
-  cursor: pointer;
   font-size: 1.2rem;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 2px;
-  position: relative;
+  cursor: pointer;
   padding: 8px 0;
 }
 
@@ -49,9 +57,170 @@ nav {
   transform: translateX(-50%);
   width: 0;
   border-bottom: 2px solid black;
+  -webkit-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  -ms-transition: background-color 1s;
+  -o-transition: background-color 1s;
   transition: width .3s;
 }
 
 .nav-links:hover::after {
   width: 50%;
+}
+
+/* ==== MOBILE ==== */
+
+.nav-mobile-logo {
+  text-decoration: none;
+  color: black;
+  font-size: 2.5rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.nav-mobile-hamburger-container {
+  position: relative;
+  cursor: pointer;
+  margin: 1rem;
+  width: 3rem;
+  height: 2rem;
+}
+
+.hamburger-rod {
+  display: block;
+  position: absolute;
+  height: .4rem;
+  width: 100%;
+  background-color: black;
+  border-radius: .4rem;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.nav-mobile-hamburger-container span:nth-child(1) {
+  top: 0;
+}
+
+.nav-mobile-hamburger-container span:nth-child(2) {
+  top: .8rem;
+}
+
+.nav-mobile-hamburger-container span:nth-child(3) {
+  top: 1.6rem;
+}
+
+.nav-mobile-hamburger-container.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 1rem;
+}
+
+.nav-mobile-hamburger-container.open span:nth-child(2) {
+  transform: rotate(-405deg);
+  top: 1rem;
+}
+
+.nav-mobile-hamburger-container.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  opacity: 0;
+  top: 1rem;
+}
+
+.mobile-sidemenu {
+  position: absolute;
+  top: -2rem;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  transform: translateY(-100%);
+  -webkit-transition: transform .5s;
+  -moz-transition: transform .5s;
+  -ms-transition: transform .5s;
+  -o-transition: transform .5s;
+  transition: transform .5s;
+  z-index: 2;
+}
+
+.mobile-sidemenu.visible {
+  transform: translateY(0%);
+}
+
+.nav-mobile-sidemenu-links {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  position: relative;
+  padding: 1rem 0;
+  -webkit-transition: opacity .2s;
+  -moz-transition: opacity .2s;
+  -ms-transition: opacity .2s;
+  -o-transition: opacity .2s;
+  transition: opacity .2s;
+}
+
+.nav-home-sidemenu-links.visible {
+  opacity: 1;
+}
+
+
+.nav-mobile-sidemenu-links::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  border-bottom: 2px solid white;
+  -webkit-transition: width .3s;
+  -moz-transition: width .3s;
+  -ms-transition: width .3s;
+  -o-transition: width .3s;
+  transition: width .3s;
+}
+
+.nav-mobile-sidemenu-links:hover::after {
+  width: 25%;
+}
+
+/* overflow hidden to app-copntainer */
+.no-scroll {
+  overflow: hidden;
+}
+
+.active-link-black::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  border-bottom: 2px solid black;
+}
+
+.active-link-white::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 25%;
+  border-bottom: 2px solid white;
 }

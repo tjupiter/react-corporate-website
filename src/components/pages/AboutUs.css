@@ -30,6 +30,11 @@
   gap: 2rem;
 }
 
+.about-section-bottom img {
+  width: 100%;
+  object-fit: cover;
+}
+
 @media screen and (min-width: 768px) {
   .about-main-inner-container {
     padding: 0;
@@ -59,6 +64,4 @@
   .about-section-bottom img {
     max-width: 45%;
   }
-
-
 }
