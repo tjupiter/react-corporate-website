@@ -11,7 +11,6 @@ function TeamMemberCard(props) {
         <a href={telTo} title={props.tel}>{props.telDisplay}</a>
         <a href={mailTo} title={props.email}>{props.email}</a>
         <div className='team-country-info'>{props.country}</div>
-
       </div>
     </div>
   )

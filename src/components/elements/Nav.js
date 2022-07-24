@@ -38,12 +38,12 @@ function NavMobile() {
 
 
   // classnames
-
-
+  // how to extract jsx expression from inline style into variables for easier maintanence ?
 
 
   return (
     <nav className={`nav ${isOpen ? '' : 'white-bg'}`}>
+      {/* MOBILE DROPDOWN MENU*/}
       {width < 768 && 
         <div className={`mobile-sidemenu ${isOpen ? '' : 'visible'}`}>
           <NavLink 
@@ -64,8 +64,11 @@ function NavMobile() {
             >Contact</NavLink>
         </div>
       }
+
+      {/* MENU BAR */}
       <div className={`container nav-elements-container ${isOpen ? '' : 'white-bg'}`}>
         <Link to="/" className='nav-mobile-logo'>RCW</Link>
+
         {width < 768 && 
           <div className={`nav-mobile-hamburger-container ${isOpen ? '' : 'open'}`} onClick={handleToggle}>
               <span className='hamburger-rod'></span>

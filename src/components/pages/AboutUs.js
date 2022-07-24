@@ -1,22 +1,23 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom'
+
 import Hero from '../sections/Hero'
 import Footer from '../sections/Footer'
-import heroImages from '../hero-images'
+
 import './AboutUs.css'
+
+import heroImages from '../hero-images'
 import teamPhotoA from '../../assets/images/team/team-a.jpg'
 import teamPhotoB from '../../assets/images/team/team-b.jpg'
-import { useLocation } from 'react-router-dom'
 
 
 function AboutUs(props) {
-  
   const location = useLocation()
+  
   return (
     <>
-      <Hero 
-        heroImgSrc={heroImages.heroAbout}
-        
-        />
+      <Hero heroImgSrc={heroImages.heroAbout}/>
+
       <div className='about-container'>
         <div className='container about-main-inner-container'>
           <section className='about-section-top'>
@@ -32,11 +33,12 @@ function AboutUs(props) {
             </div>
           </section>
           <section className='about-section-bottom flex'>
-            <img src={teamPhotoA} alt="" /> 
-            <img src={teamPhotoB} alt="" />
+            <img src={teamPhotoA} alt="team in meeting room" /> 
+            <img src={teamPhotoB} alt="team tea party" />
           </section>
         </div>
       </div>
+
       <Footer location={location}/>
     </>
   )

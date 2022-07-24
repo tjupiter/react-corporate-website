@@ -2,8 +2,6 @@ import React from 'react'
 import './Footer.css'
 
 function Footer(props) {
-
-
   const pathname = props.location.pathname
   // console.log(props)
   return (

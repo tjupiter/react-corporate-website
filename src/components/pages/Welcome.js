@@ -22,6 +22,7 @@ function Welcome() {
   const navHome = useRef(null)
   const textBox = useRef(null)
 
+  // GSAP ANIMATION - doesn't work after build
   // useEffect(() => {
   //   gsap.from(textBox.current, { opacity: "0" });
   // });
@@ -80,14 +81,12 @@ function Welcome() {
       <div className='first-load-fill-container' ref={fillContainer}></div>
       <div className='welcome-container'>
         <div ref={navHome}><NavHome /></div>
-        
         <div className='welcome-textbox' ref={textBox}>
           <p><span>React Company Dummy Website</span> Leading Cloud Creator Company In The Western Hemisphere</p>
         </div>
         <Footer location={location} />
       </div>
     </>
-
   )
-  }
+}
 export default Welcome

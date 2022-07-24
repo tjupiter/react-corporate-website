@@ -9,8 +9,9 @@ function Hero(props) {
     <header>
       <img className='hero-image' src={props.heroImgSrc} alt="" />
       <Nav />
-      {props.title && <h2 className='hero-title'>{props.title}</h2>}
-
+      {props.title && 
+        <h2 className='hero-title'>{props.title}</h2>
+      }
     </header>
   )
 }

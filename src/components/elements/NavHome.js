@@ -39,6 +39,7 @@ function NavHome() {
   return (
 
     <nav className='nav-home'>
+    {/* MOBILE DROPDOWN MENU */}
       {width < 768 &&
         <div className={`mobile-sidemenu ${isOpen ? '' : 'visible'}`}>
           <Link 
@@ -48,6 +49,8 @@ function NavHome() {
           <Link to="/contact" className={`nav-home-sidemenu-links ${isOpen ? '' : 'visible'}`}>Contact</Link>
         </div>
       }
+
+      {/* MENUBAR */}
       <div className={`container nav-home-elements-container ${isOpen ? '' : 'nav-bar-visible'}`}>
         <div className={`welcome-mobile-logo ${isOpen ? '' : 'black-font'}`} >RCW</div>
         {width < 768 &&

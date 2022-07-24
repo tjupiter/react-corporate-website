@@ -7,7 +7,6 @@ import {
 } from "react-router-dom";
 
 // import Hero from './components/sections/Hero'
-
 import Welcome from './components/pages/Welcome'
 import AboutUs from './components/pages/AboutUs'
 import WhatWeDo from './components/pages/WhatWeDo'
